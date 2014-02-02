@@ -66,9 +66,9 @@ for chan in channels:
            day=str(date.today()).replace("-","") 
 
         if stream_size > 1:
-            file = title.replace(" ", "_") + "_" + str(var["day"]) + "_teil_" + str(stream_part) +".mp3"
+            file = title.replace(" ", "_") + "_" + str(day) + "_teil_" + str(stream_part) +".mp3"
         else:
-            file = title.replace(" ", "_") + "_" + str(var["day"]) +".mp3"
+            file = title.replace(" ", "_") + "_" + str(day) +".mp3"
 
         stream =  stream["loopStreamId"]
 
