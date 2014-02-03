@@ -61,7 +61,7 @@ for chan in channels:
                 title = "FM4 Zimmerservice"
 
         try:
-           day = var["day"]
+           day = var["broadcastDay"]
         except KeyError:
            day=str(date.today()).replace("-","") 
 
@@ -87,10 +87,10 @@ for chan in channels:
             id = ID3(file)
             id["ARTIST"] = "FM4"
             if stream_size > 1:
-                id["TITLE"] = str(var["day"]) + "_" + str(stream_part)
+                id["TITLE"] = str(day) + "_" + str(stream_part)
                 stream_part=stream_part+1
             else:
-                id["TITLE"] = str(var["day"])
+                id["TITLE"] = str(day)
             id["ALBUM"] = var["title"]
             id.write
         else:
